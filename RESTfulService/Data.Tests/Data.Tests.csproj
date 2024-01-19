@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BigDSignRestfulService\RESTfulService.csproj" />
-    <ProjectReference Include="..\SignData\Data.csproj" />
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\RESTfulService\RESTfulService.csproj" />
   </ItemGroup>
 </Project>
