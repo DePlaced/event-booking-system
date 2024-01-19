@@ -11,8 +11,6 @@ namespace SignData.Tests;
 
 public class ConcurrencyIssueSolvedTest
 {
-	private readonly ISignAccess _signAccess;
-	private readonly IStadiumAccess _stadiumAccess;
 	private readonly IEventAccess _eventAccess;
 	private readonly IBookingAccess _bookingAccess;
 	private readonly IBookingLineAccess _bookingLineAccess;
