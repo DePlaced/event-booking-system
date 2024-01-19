@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BigDSignWebApp.ViewModels.BookingLineModel>?
+@{
+    ViewData["Title"] = "Booking Details";
+}
+<h2>@ViewData["Title"]</h2>
+<div>
+    <a asp-action="BookingList">Back to bookings</a>
+</div>
+@if (Model is not null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LineEvent.EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LineEvent.EventDate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => line.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => line.LineEvent.EventName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => line.SubPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => line.LineEvent.EventDate)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<partial name="_Alert" />

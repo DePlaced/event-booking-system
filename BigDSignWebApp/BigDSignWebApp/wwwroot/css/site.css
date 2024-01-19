@@ -1,0 +1,128 @@
+    html{
+        height: 100%;
+    }
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex; /* Use flexbox */
+    position: relative;
+    margin: 0;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensures body takes at least the full height of the viewport */
+    padding-bottom: 60px; /* Adjust this value based on the footer's height */
+    }
+
+    /* Change background color of the navbar */
+    .navbar {
+    background-color: #127FDF !important; /* Deep blue background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow for 3D effect */
+    }
+
+    /* Change color of navbar links */
+    .navbar .navbar-nav .nav-link {
+    color: #FDFEFE !important; /* White text color for links */
+    }
+    /* Change color of navbar links on hover */
+    .navbar .navbar-nav .nav-link:hover {
+    color: #ffd700 !important; /* Gold text color on hover */
+    }
+
+
+    main {
+        flex-grow: 1; /* Allow main content to grow and fill space */
+    }
+
+    footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the height of your footer */
+    }
+
+    /* Header Section Styling */
+    .text-center h1 {
+        font-size: 3vw; /* Larger font size for the main heading */
+        color: #0056b3; /* A cool blue color for the heading */
+        margin-bottom: 0.5rem;
+    }
+
+    .text-center p {
+        font-size: 1.5vw;
+        color: #666;
+    }
+
+    /* Carousel Styling */
+    #signCarousel {
+        max-width: 700px; /* Restricting the maximum width */
+        margin: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow for depth */
+        border-radius: 10px; /* Rounded corners for the carousel */
+        overflow: hidden; /* To ensure the rounded corners are visible */
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures the images cover the area properly */
+    }
+    /*button size edit*/
+   
+    .btn-primary, .btn-danger {
+        padding: 8px 12px; /* space between elements content and border */
+        font-size: 0.8rem; /* size of the text */
+    }
+
+    /* Button Styling */
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 4px;
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and a slight zoom */
+    }
+
+    .btn-primary:hover {
+         background-color: #0056b3;
+         transform: scale(1.05); /* Slightly enlarges the button on hover */
+    }
+
+    /* Additional Info Section */
+    div.text-center:last-of-type {
+        margin-top: 15px;
+        padding: 8px;
+        background-color: #e9ecef;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Design for Smaller Screens 
+    @media (max-width: 768px) {
+        .text-center h1 {
+            font-size: 2rem;  Smaller font size for smaller screens 
+        }
+
+        .text-center p {
+            font-size: 1rem;  Smaller font size for paragraphs on smaller screens 
+        }
+
+        #signCarousel {
+            max-width: 100%;  Carousel takes full width on smaller screens 
+        }
+    }
+
+     Additional Responsive Design for Even Smaller Screens (Mobile Phones) 
+    @media (max-width: 480px) {
+        .text-center h1 {
+            font-size: 5vw;  Increase size slightly for very small screens 
+        }
+
+        .text-center p {
+            font-size: 3vw;  Increase size slightly for very small screens 
+        }
+
+        .btn-primary {
+            padding: 8px 15px;  Smaller padding for buttons 
+            font-size: 2vw;  Smaller font size for buttons 
+        }
+    }*/

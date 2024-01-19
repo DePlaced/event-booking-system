@@ -1,0 +1,33 @@
+﻿@using BigDSignWebApp.Cookies;
+@{
+    ViewData["Title"] = "Account";
+}
+<h1>
+    @ViewData["Title"]
+</h1>
+<p>
+    <span class="fw-bold">
+        ID:
+    </span>
+    @ViewBag.CookieUser.Id
+    <br />
+    <span class="fw-bold">
+        Full name:
+    </span>
+    @ViewBag.CookieUser.FullName
+    <br />
+    <span class="fw-bold">
+        Username:
+    </span>
+    @ViewBag.CookieUser.Username
+    <br />
+    <span class="fw-bold">
+        Email:
+    </span>
+    @ViewBag.CookieUser.Email
+    <br />
+    <span class="fw-bold">
+        Roles:
+    </span>
+    @ViewBag.CookieUser.Roles
+</p>

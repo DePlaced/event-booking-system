@@ -1,0 +1,11 @@
+﻿@{
+	// Get alert data from TempData.
+	string? alertType = TempData["AlertType"] as string;
+	string? alertMessage = TempData["AlertMessage"] as string;
+}
+@if (alertType is not null && alertMessage is not null)
+{
+	<div class="alert alert-@alertType" role="alert">
+		@alertMessage
+	</div>
+}

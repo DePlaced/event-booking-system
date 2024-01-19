@@ -1,0 +1,138 @@
+﻿@using System.Linq
+@model IEnumerable<EventModel>?
+@{
+	ViewData["Title"] = "Events";
+	ViewData["Title2"] = "Selected Events";
+	// Cast selected events and set to an empty enumerable if null
+	var selectedEvents = ViewBag.SelectedEvents as IEnumerable<EventModel> ?? Enumerable.Empty<EventModel>();
+}
+<h1>@ViewData["Title"]</h1>
+@if (Model is not null)
+{
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>
+						@Html.DisplayNameFor(model => model!.First().EventName)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model!.First().EventDate)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model!.First().Price)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model!.First().AvailabilityStatus)
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var eventModel in Model)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => eventModel.EventName)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => eventModel.EventDate)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => eventModel.Price)
+						</td>
+						<td class="event-status">
+							@Html.DisplayFor(modelItem => eventModel.AvailabilityStatus)
+						</td>
+						<td>
+							@if (eventModel.AvailabilityStatus == "Available")
+							{
+								if (!selectedEvents.Any(e => e.Id == eventModel.Id))
+								{
+									using (Html.BeginForm("AddEventToBooking", "Events", FormMethod.Post, new { @class = "form-inline" }))
+									{
+										@Html.Hidden("eventId", eventModel.Id)
+										@Html.Hidden("eventName", eventModel.EventName)
+										@Html.Hidden("price", eventModel.Price)
+										@Html.Hidden("rowId", eventModel.RowId)
+										@Html.Hidden("rowIdBig", eventModel.RowIdBig)
+										<button type="submit" class="btn btn-primary add-to-booking-button">Add to booking</button>
+									}
+
+								}
+								else
+								{
+									@:Added to booking
+								}
+							}
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+	<h2>@ViewData["Title2"]</h2>
+	<div id="selectedEventsList" class="mb-3">
+		@if (ViewBag.SelectedEvents.Count > 0)
+		{
+			<ul>
+				@foreach (var eventModel in ViewBag.SelectedEvents)
+				{
+					<li class="list-group-item">@eventModel.EventName - Price: @eventModel.Price</li>
+				}
+			</ul>
+			<div class="d-flex gap-3">
+				@using (Html.BeginForm("CreateBooking", "Events", FormMethod.Post))
+				{
+					<button type="submit" class="btn btn-primary">Click on me for booking!</button>
+				}
+				@using (Html.BeginForm("ClearBookingEvents", "Events", FormMethod.Post))
+				{
+					<button type="submit" class="btn btn-danger">Clear bookings!</button>
+				}
+			</div>
+		}
+		else
+		{
+			<p>No events selected.</p>
+		}
+	</div>
+}
+<partial name="_Alert" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.9/signalr.min.js"></script>
+
+<script type="text/javascript">
+	var connection = new signalR.HubConnectionBuilder().withUrl("/eventHub").build();
+
+	// Start the connection.
+	connection.start().catch(function (err)
+	{
+		return console.error(err.toString());
+	});
+	// Handling the ReceiveEventUpdate message from the server
+	connection.on("ReceiveEventUpdate", function (eventId, newStatus)
+	{
+		var eventRow = document.getElementById('event-' + eventId);
+		if (eventRow)
+		{
+			eventRow.querySelector('.event-status').textContent = newStatus;
+
+			// Modify the button based on newStatus
+			var addButton = eventRow.querySelector('.add-to-booking-button');
+			if (addButton)
+			{
+				if (newStatus === "Sold out")
+				{
+					addButton.disabled = true; // Disable the button
+					addButton.textContent = 'Event already booked'; // Change button text
+				} else
+				{
+					addButton.disabled = false; // Enable the button
+					addButton.textContent = 'Add to booking'; // Restore original text
+				}
+			}
+		}
+	});
+
+</script>
