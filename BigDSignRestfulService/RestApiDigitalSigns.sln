@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigDSignRestfulService", "BigDSignRestfulService\BigDSignRestfulService.csproj", "{A7F9BFD1-FEFE-49B5-9551-E5A2DB9B48B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTfulService", "BigDSignRestfulService\RESTfulService.csproj", "{A7F9BFD1-FEFE-49B5-9551-E5A2DB9B48B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "SignData\Data.csproj", "{354AFF25-1D08-4066-8716-6745A42A83BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignData.Tests", "SignData.Tests\SignData.Tests.csproj", "{452B6BD3-FC9D-49FF-9B65-9E50E8A3BC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Tests", "SignData.Tests\Data.Tests.csproj", "{452B6BD3-FC9D-49FF-9B65-9E50E8A3BC35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
