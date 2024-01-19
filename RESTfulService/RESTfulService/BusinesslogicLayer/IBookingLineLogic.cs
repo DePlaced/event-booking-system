@@ -15,11 +15,6 @@ namespace RESTfulService.BusinesslogicLayer
 		Task<List<BookingLineDTO>> GetAll(int bookingId);
 
 		///<summary>
-		///Creates a BookingLine
-		///</summary>
-		Task<int> Add(BookingLineDTO BookingLineToAdd);
-
-		///<summary>
 		///Updates a BookingLine with the given ID.
 		///</summary>
 		Task<bool> Put(int id, BookingLineDTO bookingLineToUpdate);

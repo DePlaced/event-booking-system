@@ -29,14 +29,6 @@ namespace RESTfulService.BusinesslogicLayer
 		}
 
 		///<summary>
-		///Creates a BookingLine
-		///</summary>
-		public async Task<int> Add(BookingLineDTO bookingLineToAdd)
-		{
-			return await _bookingLineAccess.CreateBookingLine(bookingLineToAdd.ToBookingLine());
-		}
-
-		///<summary>
 		///Deletes a BookingLine with given ID. 
 		///</summary>
 		public async Task<bool> Delete(int id)

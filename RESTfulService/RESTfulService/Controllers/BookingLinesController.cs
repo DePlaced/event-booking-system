@@ -17,10 +17,6 @@ namespace RESTfulService.Controllers
     {
         private readonly IBookingLineLogic _bookingLineLogic;
 
-        /// <summary>
-        /// The constructor for the bookingLinesController
-        /// </summary>
-        /// <param name="bookingLineLogic"></param>
         public BookingLinesController(IBookingLineLogic bookingLineLogic)
         {
             _bookingLineLogic = bookingLineLogic;
@@ -74,10 +70,9 @@ namespace RESTfulService.Controllers
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status405MethodNotAllowed)]
 		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		[ResponseCache(Duration = 14400, Location = ResponseCacheLocation.Any)]
+		[ResponseCache(Duration = 14400, Location = ResponseCacheLocation.Client, VaryByQueryKeys = new[] { "bookingId" })]
 		public async Task<ActionResult<APIResult>> GetAll([FromQuery]int? bookingId)
         {
-			Response.Headers["Cache-Control"] = "private, max-age=14400, must-revalidate";
 			try
             {
 				if (bookingId.HasValue)
@@ -89,38 +84,6 @@ namespace RESTfulService.Controllers
 				{
 					return StatusCode(405);
 				}
-            }
-			// Catch exceptions caused by a bad request.
-			catch (BadRequestException exception)
-			{
-				return BadRequest(APIResult.WithError(exception.Message));
-			}
-			// Catch other exceptions.
-			catch (Exception exception)
-			{
-				Console.Error.Write(exception);
-				return StatusCode(StatusCodes.Status500InternalServerError, APIResult.WithInternalServerError());
-			}
-		}
-
-		/// <summary>
-		/// Creates a new BookingLine.
-		/// </summary>
-		/// <param name="bookingLineDTO">JSON object representing the BookingLine.</param>
-		/// <response code="201">Returns the created booking line ID.</response>
-		/// <response code="400">Bad request if data is invalid.</response>
-		/// <response code="500">Internal Server Error: An unexpected error occurred on the server.</response>
-		// URI: api/booking-lines
-		[HttpPost]
-		[ProducesResponseType(StatusCodes.Status201Created)]
-		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-		public async Task<ActionResult<APIResult>> Create([FromBody] BookingLineDTO bookingLineDTO)
-        {
-			try
-            {
-                int insertedId = await _bookingLineLogic.Add(bookingLineDTO);
-                return Created($"api/booking-lines/{insertedId}", APIResult.WithData(insertedId));
             }
 			// Catch exceptions caused by a bad request.
 			catch (BadRequestException exception)
