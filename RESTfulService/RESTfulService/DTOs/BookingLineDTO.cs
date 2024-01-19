@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BigDSignRestfulService.DTOs
+namespace RESTfulService.DTOs
 {
     public class BookingLineDTO
     {

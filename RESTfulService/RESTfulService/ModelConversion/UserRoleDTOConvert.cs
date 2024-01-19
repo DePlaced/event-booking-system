@@ -1,8 +1,8 @@
 ﻿using System;
-using BigDSignRestfulService.DTOs;
-using SignData.ModelLayer;
+using RESTfulService.DTOs;
+using Data.ModelLayer;
 
-namespace BigDSignRestfulService.ModelConversion
+namespace RESTfulService.ModelConversion
 {
     public static class UserRoleDTOConvert
     {

@@ -1,11 +1,11 @@
-﻿using SignData.ModelLayer;
+﻿using Data.ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SignData.DatabaseLayer
+namespace Data.DatabaseLayer
 {
     public interface IBookingAccess
     {

@@ -1,13 +1,13 @@
-﻿using BigDSignRestfulService.DTOs;
-using BigDSignRestfulService.ModelConversion;
-using SignData.DatabaseLayer;
-using SignData.Exceptions;
-using SignData.ModelLayer;
+﻿using RESTfulService.DTOs;
+using RESTfulService.ModelConversion;
+using Data.DatabaseLayer;
+using Data.Exceptions;
+using Data.ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 
-namespace BigDSignRestfulService.BusinesslogicLayer
+namespace RESTfulService.BusinesslogicLayer
 {
 	/// <summary>
 	/// Service class for handling operations related to user entities.

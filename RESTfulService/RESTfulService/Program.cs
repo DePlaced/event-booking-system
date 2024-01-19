@@ -1,6 +1,6 @@
-using BigDSignRestfulService.BusinesslogicLayer;
+using RESTfulService.BusinesslogicLayer;
 using Microsoft.OpenApi.Models;
-using SignData.DatabaseLayer;
+using Data.DatabaseLayer;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SignData.Tests
+namespace Data.Tests
 {
     public class TestConfigHelper
     {

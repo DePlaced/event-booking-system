@@ -1,7 +1,7 @@
-﻿using SignData.ModelLayer;
-using BigDSignRestfulService.DTOs;
+﻿using Data.ModelLayer;
+using RESTfulService.DTOs;
 
-namespace BigDSignRestfulService.ModelConversion
+namespace RESTfulService.ModelConversion
 {
     public static class SignDTOConvert
     {

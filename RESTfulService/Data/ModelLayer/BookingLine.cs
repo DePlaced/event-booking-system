@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SignData.ModelLayer
+namespace Data.ModelLayer
 {
     public class BookingLine
     {

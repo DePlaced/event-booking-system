@@ -1,6 +1,6 @@
-﻿using BigDSignRestfulService.DTOs;
+﻿using RESTfulService.DTOs;
 
-namespace BigDSignRestfulService.BusinesslogicLayer
+namespace RESTfulService.BusinesslogicLayer
 {
 	public interface IEventLogic
 	{

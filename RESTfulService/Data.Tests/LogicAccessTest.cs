@@ -1,7 +1,7 @@
-﻿using BigDSignRestfulService.BusinesslogicLayer;
+﻿using RESTfulService.BusinesslogicLayer;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using SignData.DatabaseLayer;
+using Data.DatabaseLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit.Abstractions;
 
-namespace SignData.Tests
+namespace Data.Tests
 {
     public class LogicAccessTest
     {

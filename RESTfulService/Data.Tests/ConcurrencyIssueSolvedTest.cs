@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using SignData;
-using SignData.DatabaseLayer;
-using SignData.ModelLayer;
+using Data;
+using Data.DatabaseLayer;
+using Data.ModelLayer;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Xunit.Abstractions;
 
-namespace SignData.Tests;
+namespace Data.Tests;
 
 public class ConcurrencyIssueSolvedTest
 {

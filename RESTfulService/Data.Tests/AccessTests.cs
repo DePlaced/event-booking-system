@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
-using SignData;
-using SignData.DatabaseLayer;
+using Data;
+using Data.DatabaseLayer;
 using Xunit.Abstractions;
 
-namespace SignData.Tests;
+namespace Data.Tests;
 
 public class AccessTests
 {

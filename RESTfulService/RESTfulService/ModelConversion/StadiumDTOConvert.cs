@@ -1,9 +1,9 @@
-﻿using SignData.ModelLayer;
-using BigDSignRestfulService.DTOs;
+﻿using Data.ModelLayer;
+using RESTfulService.DTOs;
 using System.Collections.Generic;
-using SignData.DatabaseLayer;
+using Data.DatabaseLayer;
 
-namespace BigDSignRestfulService.ModelConversion
+namespace RESTfulService.ModelConversion
 {
     public static class StadiumDTOConvert
     {

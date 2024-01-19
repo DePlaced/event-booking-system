@@ -1,8 +1,8 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Win32.SafeHandles;
-using SignData.Exceptions;
-using SignData.ModelLayer;
+using Data.Exceptions;
+using Data.ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -13,7 +13,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SignData.DatabaseLayer
+namespace Data.DatabaseLayer
 {
 	public class EventAccess : IEventAccess
 	{

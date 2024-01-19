@@ -1,6 +1,6 @@
-﻿using SignData.ModelLayer;
+﻿using Data.ModelLayer;
 
-namespace BigDSignRestfulService.DTOs
+namespace RESTfulService.DTOs
 {
     public class StadiumDTO
     {

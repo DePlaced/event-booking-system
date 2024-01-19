@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using BigDSignRestfulService.BusinesslogicLayer;
-using BigDSignRestfulService.DTOs;
-using SignData.Exceptions;
+using RESTfulService.BusinesslogicLayer;
+using RESTfulService.DTOs;
+using Data.Exceptions;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BigDSignRestfulService.Controllers
+namespace RESTfulService.Controllers
 {
 	/// <summary>
 	/// API controller for managing BookingLines.

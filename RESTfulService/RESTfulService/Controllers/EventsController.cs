@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BigDSignRestfulService.BusinesslogicLayer;
-using BigDSignRestfulService.DTOs;
+using RESTfulService.BusinesslogicLayer;
+using RESTfulService.DTOs;
 using System.Collections.Generic;
-using SignData.Exceptions;
+using Data.Exceptions;
 
-namespace BigDSignRestfulService.Controllers
+namespace RESTfulService.Controllers
 {
 
 	/// <summary>

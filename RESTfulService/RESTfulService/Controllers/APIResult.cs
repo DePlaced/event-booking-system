@@ -1,4 +1,4 @@
-﻿namespace BigDSignRestfulService.Controllers
+﻿namespace RESTfulService.Controllers
 {
     /// <summary>
     /// An API result that can contain data or an error message.

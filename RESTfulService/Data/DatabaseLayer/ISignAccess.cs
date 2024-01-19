@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SignData.ModelLayer;
+using Data.ModelLayer;
 
-namespace SignData.DatabaseLayer
+namespace Data.DatabaseLayer
 {
     public interface ISignAccess
     {

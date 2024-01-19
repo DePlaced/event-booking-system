@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BigDSignRestfulService.BusinesslogicLayer;
-using BigDSignRestfulService.DTOs;
+using RESTfulService.BusinesslogicLayer;
+using RESTfulService.DTOs;
 using System.Collections.Generic;
 using System;
-using SignData.Exceptions;
+using Data.Exceptions;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace BigDSignRestfulService.Controllers
+namespace RESTfulService.Controllers
 {
 
 	/// <summary>

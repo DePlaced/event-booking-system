@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
-using SignData.ModelLayer;
+using Data.ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Dapper.SqlMapper;
 
-namespace SignData.DatabaseLayer
+namespace Data.DatabaseLayer
 {
 	public class StadiumAccess : IStadiumAccess
 	{

@@ -1,12 +1,12 @@
-﻿using BigDSignRestfulService.DTOs;
-using BigDSignRestfulService.ModelConversion;
+﻿using RESTfulService.DTOs;
+using RESTfulService.ModelConversion;
 using Microsoft.Extensions.Configuration;
-using SignData.DatabaseLayer;
-using SignData.ModelLayer;
+using Data.DatabaseLayer;
+using Data.ModelLayer;
 using System;
 using System.Collections.Generic;
 
-namespace BigDSignRestfulService.BusinesslogicLayer
+namespace RESTfulService.BusinesslogicLayer
 {
 	/// <summary>
 	/// Service class for handling operations related to sign entities.

@@ -1,12 +1,12 @@
-﻿using BigDSignRestfulService.DTOs;
-using SignData.DatabaseLayer;
-using SignData.ModelLayer;
+﻿using RESTfulService.DTOs;
+using Data.DatabaseLayer;
+using Data.ModelLayer;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
-using BigDSignRestfulService.ModelConversion;
-using SignData.Exceptions;
+using RESTfulService.ModelConversion;
+using Data.Exceptions;
 
-namespace BigDSignRestfulService.BusinesslogicLayer
+namespace RESTfulService.BusinesslogicLayer
 {
     /// <summary>
     /// Logic class for handling operations related to booking entities.

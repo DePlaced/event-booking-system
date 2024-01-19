@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace BigDSignRestfulService.DTOs
+namespace RESTfulService.DTOs
 {
     public class UserRoleDTO
     {

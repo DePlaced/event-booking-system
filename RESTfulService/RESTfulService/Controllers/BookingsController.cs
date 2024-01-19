@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using BigDSignRestfulService.BusinesslogicLayer;
-using BigDSignRestfulService.DTOs;
-using SignData.Exceptions;
+using RESTfulService.BusinesslogicLayer;
+using RESTfulService.DTOs;
+using Data.Exceptions;
 
-namespace BigDSignRestfulService.Controllers
+namespace RESTfulService.Controllers
 {
 	/// <summary>
 	/// API controller for managing Bookings.

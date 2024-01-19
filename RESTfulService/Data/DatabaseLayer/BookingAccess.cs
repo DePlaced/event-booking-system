@@ -1,11 +1,11 @@
 ﻿using Dapper;
 using Microsoft.Extensions.Configuration;
-using SignData.Exceptions;
-using SignData.ModelLayer;
+using Data.Exceptions;
+using Data.ModelLayer;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace SignData.DatabaseLayer
+namespace Data.DatabaseLayer
 {
 	public class BookingAccess : IBookingAccess
 	{

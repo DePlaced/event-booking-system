@@ -1,4 +1,4 @@
-﻿namespace SignData.Exceptions
+﻿namespace Data.Exceptions
 {
 	[Serializable]
 	public class BadRequestException : Exception
